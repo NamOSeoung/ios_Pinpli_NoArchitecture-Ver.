@@ -13,6 +13,9 @@
 		1A0FC68D2510B4E800E81E89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A0FC68B2510B4E800E81E89 /* Main.storyboard */; };
 		1A0FC68F2510B4EA00E81E89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A0FC68E2510B4EA00E81E89 /* Assets.xcassets */; };
 		1A0FC6922510B4EA00E81E89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A0FC6902510B4EA00E81E89 /* LaunchScreen.storyboard */; };
+		1A0FC69C2510B69200E81E89 /* ForgotUserInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A0FC69B2510B69200E81E89 /* ForgotUserInfo.storyboard */; };
+		1A0FC69E2510C11E00E81E89 /* StoryBoardInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0FC69D2510C11E00E81E89 /* StoryBoardInstance.swift */; };
+		1A0FC6A02510C1B100E81E89 /* ForgotUserIdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0FC69F2510C1B100E81E89 /* ForgotUserIdVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		1A0FC68E2510B4EA00E81E89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A0FC6912510B4EA00E81E89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A0FC6932510B4EA00E81E89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A0FC69B2510B69200E81E89 /* ForgotUserInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotUserInfo.storyboard; sourceTree = "<group>"; };
+		1A0FC69D2510C11E00E81E89 /* StoryBoardInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardInstance.swift; sourceTree = "<group>"; };
+		1A0FC69F2510C1B100E81E89 /* ForgotUserIdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotUserIdVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,9 @@
 		1A0FC6842510B4E800E81E89 /* Review */ = {
 			isa = PBXGroup;
 			children = (
+				1A0FC6A12510C52700E81E89 /* KeyboardCommon */,
+				1A0FC6992510B59A00E81E89 /* Login */,
+				1A0FC69A2510B5A000E81E89 /* Home */,
 				1A0FC6852510B4E800E81E89 /* AppDelegate.swift */,
 				1A0FC6872510B4E800E81E89 /* SceneDelegate.swift */,
 				1A0FC6892510B4E800E81E89 /* ViewController.swift */,
@@ -63,8 +72,32 @@
 				1A0FC68E2510B4EA00E81E89 /* Assets.xcassets */,
 				1A0FC6902510B4EA00E81E89 /* LaunchScreen.storyboard */,
 				1A0FC6932510B4EA00E81E89 /* Info.plist */,
+				1A0FC69B2510B69200E81E89 /* ForgotUserInfo.storyboard */,
+				1A0FC69D2510C11E00E81E89 /* StoryBoardInstance.swift */,
+				1A0FC69F2510C1B100E81E89 /* ForgotUserIdVC.swift */,
 			);
 			path = Review;
+			sourceTree = "<group>";
+		};
+		1A0FC6992510B59A00E81E89 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		1A0FC69A2510B5A000E81E89 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1A0FC6A12510C52700E81E89 /* KeyboardCommon */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = KeyboardCommon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +158,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A0FC69C2510B69200E81E89 /* ForgotUserInfo.storyboard in Resources */,
 				1A0FC6922510B4EA00E81E89 /* LaunchScreen.storyboard in Resources */,
 				1A0FC68F2510B4EA00E81E89 /* Assets.xcassets in Resources */,
 				1A0FC68D2510B4E800E81E89 /* Main.storyboard in Resources */,
@@ -139,6 +173,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A0FC68A2510B4E800E81E89 /* ViewController.swift in Sources */,
+				1A0FC6A02510C1B100E81E89 /* ForgotUserIdVC.swift in Sources */,
+				1A0FC69E2510C11E00E81E89 /* StoryBoardInstance.swift in Sources */,
 				1A0FC6862510B4E800E81E89 /* AppDelegate.swift in Sources */,
 				1A0FC6882510B4E800E81E89 /* SceneDelegate.swift in Sources */,
 			);
@@ -294,7 +330,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "kr.nam-os.review.Review";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,7 +348,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "kr.nam-os.review.Review";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

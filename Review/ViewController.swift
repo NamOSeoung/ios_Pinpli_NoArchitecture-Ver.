@@ -15,6 +15,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func findIdBtn(_ sender: Any) {
+        
+        let forgotUserId = forgotUserInfoStoryBoard.instantiateViewController(withIdentifier: "ForgotUserId") as! ForgotUserId
+        self.present(forgotUserId, animated: true, completion: nil)
 
+    }
+    
 }
 

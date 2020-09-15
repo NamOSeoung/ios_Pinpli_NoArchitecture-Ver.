@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "FF3B39CC-B3EA-4850-BAF8-8E3CD28D9D52"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ADC0EC4C-17A4-42A3-8EF2-F76F7462DDDD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Review/ForgotUserIdVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "ADC0EC4C-17A4-42A3-8EF2-F76F7462DDDD - 3ba842254d02a5a5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Review.ForgotUserId.nextStepWrap.getter : Swift.Optional&lt;__C.UIView&gt;"
+                  moduleName = "Review"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nam-oseung/dev/iOS/Review/Review/ForgotUserIdVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "ADC0EC4C-17A4-42A3-8EF2-F76F7462DDDD - 2cf0da588cda5c99"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Review.ForgotUserId.nextStepWrap.setter : Swift.Optional&lt;__C.UIView&gt;"
+                  moduleName = "Review"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nam-oseung/dev/iOS/Review/Review/ForgotUserIdVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "200">
+               </Location>
+               <Location
+                  uuid = "ADC0EC4C-17A4-42A3-8EF2-F76F7462DDDD - 61491b53032f1398"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Review.ForgotUserId.nextStepWrap.modify : Swift.Optional&lt;__C.UIView&gt;"
+                  moduleName = "Review"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nam-oseung/dev/iOS/Review/Review/ForgotUserIdVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "ADC0EC4C-17A4-42A3-8EF2-F76F7462DDDD - bc317b2bb2e87e18"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Review.ForgotUserId.nextStepWrap.modify : Swift.Optional&lt;__C.UIView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Review"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nam-oseung/dev/iOS/Review/Review/ForgotUserIdVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "ADC0EC4C-17A4-42A3-8EF2-F76F7462DDDD - c084b9c2593d5252"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Review.ForgotUserId.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Review.ForgotUserId"
+                  moduleName = "Review"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nam-oseung/dev/iOS/Review/Review/ForgotUserIdVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "424">
+               </Location>
+               <Location
+                  uuid = "ADC0EC4C-17A4-42A3-8EF2-F76F7462DDDD - 6df0c1f8e7f43a55"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Review.ForgotUserId.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Review.ForgotUserId&gt;"
+                  moduleName = "Review"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nam-oseung/dev/iOS/Review/Review/ForgotUserIdVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "372">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
