@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Review" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="BYZ-38-t0r" customClass="ViewController" customModule="Review" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,10 +26,23 @@
                                     <action selector="findIdBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tjm-a2-LXQ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pdp-Y7-b0R">
+                                <rect key="frame" x="181" y="353" width="52" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="DKk-be-YFY"/>
+                                </constraints>
+                                <state key="normal" title="회원가입"/>
+                                <connections>
+                                    <action selector="signUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i1m-Oa-Ph9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="MBM-oZ-3ck" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GLK-ON-oVR"/>
+                            <constraint firstItem="MBM-oZ-3ck" firstAttribute="top" secondItem="Pdp-Y7-b0R" secondAttribute="bottom" constant="50" id="Q1B-D6-lOY"/>
+                            <constraint firstItem="Pdp-Y7-b0R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="181" id="Snc-CJ-dKr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pdp-Y7-b0R" secondAttribute="trailing" constant="181" id="bGj-Vw-Mbg"/>
                             <constraint firstItem="MBM-oZ-3ck" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lI1-yx-my4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

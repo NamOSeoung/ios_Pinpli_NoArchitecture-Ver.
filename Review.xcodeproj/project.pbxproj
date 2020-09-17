@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A0F2FF92511887000C8FEF7 /* ForgetUserIdTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0F2FF82511887000C8FEF7 /* ForgetUserIdTF.swift */; };
+		1A0F2FFD25118D4500C8FEF7 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0F2FFC25118D4500C8FEF7 /* TextFieldExtension.swift */; };
 		1A0FC6862510B4E800E81E89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0FC6852510B4E800E81E89 /* AppDelegate.swift */; };
 		1A0FC6882510B4E800E81E89 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0FC6872510B4E800E81E89 /* SceneDelegate.swift */; };
 		1A0FC68A2510B4E800E81E89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0FC6892510B4E800E81E89 /* ViewController.swift */; };
@@ -16,9 +18,16 @@
 		1A0FC69C2510B69200E81E89 /* ForgotUserInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A0FC69B2510B69200E81E89 /* ForgotUserInfo.storyboard */; };
 		1A0FC69E2510C11E00E81E89 /* StoryBoardInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0FC69D2510C11E00E81E89 /* StoryBoardInstance.swift */; };
 		1A0FC6A02510C1B100E81E89 /* ForgotUserIdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0FC69F2510C1B100E81E89 /* ForgotUserIdVC.swift */; };
+		1A369F31251232DC00EC5C94 /* DragViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A369F30251232DC00EC5C94 /* DragViewTest.swift */; };
+		1AE65C3E251107B40060C8E8 /* FoundUserIdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE65C3D251107B40060C8E8 /* FoundUserIdVC.swift */; };
+		1AE65C40251107D50060C8E8 /* NotFoundUserIdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE65C3F251107D50060C8E8 /* NotFoundUserIdVC.swift */; };
+		1AE65C4225110B3C0060C8E8 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE65C4125110B3C0060C8E8 /* Common.swift */; };
+		1AED108A25134B7600B6EF64 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AED108925134B7600B6EF64 /* SignUp.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A0F2FF82511887000C8FEF7 /* ForgetUserIdTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetUserIdTF.swift; sourceTree = "<group>"; };
+		1A0F2FFC25118D4500C8FEF7 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
 		1A0FC6822510B4E800E81E89 /* Review.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Review.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A0FC6852510B4E800E81E89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A0FC6872510B4E800E81E89 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +39,11 @@
 		1A0FC69B2510B69200E81E89 /* ForgotUserInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotUserInfo.storyboard; sourceTree = "<group>"; };
 		1A0FC69D2510C11E00E81E89 /* StoryBoardInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardInstance.swift; sourceTree = "<group>"; };
 		1A0FC69F2510C1B100E81E89 /* ForgotUserIdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotUserIdVC.swift; sourceTree = "<group>"; };
+		1A369F30251232DC00EC5C94 /* DragViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragViewTest.swift; sourceTree = "<group>"; };
+		1AE65C3D251107B40060C8E8 /* FoundUserIdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundUserIdVC.swift; sourceTree = "<group>"; };
+		1AE65C3F251107D50060C8E8 /* NotFoundUserIdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotFoundUserIdVC.swift; sourceTree = "<group>"; };
+		1AE65C4125110B3C0060C8E8 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		1AED108925134B7600B6EF64 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +57,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A0F2FF62511885100C8FEF7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1A0F2FF72511885900C8FEF7 /* TextField */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		1A0F2FF72511885900C8FEF7 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				1A0F2FF82511887000C8FEF7 /* ForgetUserIdTF.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		1A0F2FFA25118D2700C8FEF7 /* UIKitExtension */ = {
+			isa = PBXGroup;
+			children = (
+				1A0F2FFB25118D3200C8FEF7 /* TextField */,
+			);
+			path = UIKitExtension;
+			sourceTree = "<group>";
+		};
+		1A0F2FFB25118D3200C8FEF7 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				1A0F2FFC25118D4500C8FEF7 /* TextFieldExtension.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
 		1A0FC6792510B4E800E81E89 = {
 			isa = PBXGroup;
 			children = (
@@ -62,7 +108,8 @@
 		1A0FC6842510B4E800E81E89 /* Review */ = {
 			isa = PBXGroup;
 			children = (
-				1A0FC6A12510C52700E81E89 /* KeyboardCommon */,
+				1A0F2FFA25118D2700C8FEF7 /* UIKitExtension */,
+				1AE65C3B251106830060C8E8 /* ForgotUser */,
 				1A0FC6992510B59A00E81E89 /* Login */,
 				1A0FC69A2510B5A000E81E89 /* Home */,
 				1A0FC6852510B4E800E81E89 /* AppDelegate.swift */,
@@ -74,7 +121,8 @@
 				1A0FC6932510B4EA00E81E89 /* Info.plist */,
 				1A0FC69B2510B69200E81E89 /* ForgotUserInfo.storyboard */,
 				1A0FC69D2510C11E00E81E89 /* StoryBoardInstance.swift */,
-				1A0FC69F2510C1B100E81E89 /* ForgotUserIdVC.swift */,
+				1AE65C4125110B3C0060C8E8 /* Common.swift */,
+				1AED108925134B7600B6EF64 /* SignUp.storyboard */,
 			);
 			path = Review;
 			sourceTree = "<group>";
@@ -93,11 +141,24 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		1A0FC6A12510C52700E81E89 /* KeyboardCommon */ = {
+		1AE65C3B251106830060C8E8 /* ForgotUser */ = {
 			isa = PBXGroup;
 			children = (
+				1A0F2FF62511885100C8FEF7 /* Extension */,
+				1AE65C3C2511068F0060C8E8 /* VC */,
 			);
-			path = KeyboardCommon;
+			path = ForgotUser;
+			sourceTree = "<group>";
+		};
+		1AE65C3C2511068F0060C8E8 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				1A0FC69F2510C1B100E81E89 /* ForgotUserIdVC.swift */,
+				1AE65C3D251107B40060C8E8 /* FoundUserIdVC.swift */,
+				1AE65C3F251107D50060C8E8 /* NotFoundUserIdVC.swift */,
+				1A369F30251232DC00EC5C94 /* DragViewTest.swift */,
+			);
+			path = VC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +223,7 @@
 				1A0FC6922510B4EA00E81E89 /* LaunchScreen.storyboard in Resources */,
 				1A0FC68F2510B4EA00E81E89 /* Assets.xcassets in Resources */,
 				1A0FC68D2510B4E800E81E89 /* Main.storyboard in Resources */,
+				1AED108A25134B7600B6EF64 /* SignUp.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,10 +234,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AE65C4225110B3C0060C8E8 /* Common.swift in Sources */,
+				1AE65C40251107D50060C8E8 /* NotFoundUserIdVC.swift in Sources */,
 				1A0FC68A2510B4E800E81E89 /* ViewController.swift in Sources */,
+				1A0F2FFD25118D4500C8FEF7 /* TextFieldExtension.swift in Sources */,
+				1AE65C3E251107B40060C8E8 /* FoundUserIdVC.swift in Sources */,
 				1A0FC6A02510C1B100E81E89 /* ForgotUserIdVC.swift in Sources */,
+				1A369F31251232DC00EC5C94 /* DragViewTest.swift in Sources */,
 				1A0FC69E2510C11E00E81E89 /* StoryBoardInstance.swift in Sources */,
 				1A0FC6862510B4E800E81E89 /* AppDelegate.swift in Sources */,
+				1A0F2FF92511887000C8FEF7 /* ForgetUserIdTF.swift in Sources */,
 				1A0FC6882510B4E800E81E89 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

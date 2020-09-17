@@ -17,10 +17,18 @@ class ViewController: UIViewController {
 
     @IBAction func findIdBtn(_ sender: Any) {
         
-        let forgotUserId = forgotUserInfoStoryBoard.instantiateViewController(withIdentifier: "ForgotUserId") as! ForgotUserId
-        self.present(forgotUserId, animated: true, completion: nil)
+        let forgotUserIdVC = forgotUserInfoStoryBoard.instantiateViewController(withIdentifier: "ForgotUserIdVC") as! ForgotUserIdVC
+        self.present(forgotUserIdVC, animated: true, completion: nil)
+        
+//        let dragViewTest = forgotUserInfoStoryBoard.instantiateViewController(withIdentifier: "DragViewTest") as! DragViewTest
+//        self.present(dragViewTest, animated: true, completion: nil)
+        
+        
 
     }
     
+    @IBAction func signUpBtn(_ sender: Any) {
+    
+    }
 }
 
