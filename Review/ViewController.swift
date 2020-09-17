@@ -28,7 +28,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func signUpBtn(_ sender: Any) {
-    
+        let signUpTermsVC = signUpStoryBoard.instantiateViewController(withIdentifier: "SignUpTermsVC") as! SignUpTermsVC
+        self.present(signUpTermsVC, animated: true, completion: nil)
     }
 }
 

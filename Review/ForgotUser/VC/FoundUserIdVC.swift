@@ -9,12 +9,6 @@
 import UIKit
 
 class FoundUserIdVC: UIViewController {
-//    @IBOutlet weak var phoneWrap: UIView!
-//
-//    @IBOutlet weak var birthWrap: UIView!
-//
-//    @IBOutlet weak var nextStepWrap: UIView!
-//
     var nextStepWrapHeight:CGFloat = 44.0
     
     @IBOutlet weak var forgetPwdWrap: UIView!
