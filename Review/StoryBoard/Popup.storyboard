@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Terms PopupVC-->
+        <scene sceneID="oHV-SF-oIs">
+            <objects>
+                <viewController storyboardIdentifier="TermsPopupVC" id="9e6-Yt-gly" customClass="TermsPopupVC" customModule="Review" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3XC-dy-Z5N">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cLw-LI-Nf3">
+                                <rect key="frame" x="42" y="173" width="330" height="550"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCu-Bc-ziY">
+                                        <rect key="frame" x="0.0" y="0.0" width="112.5" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Aai-cH-b3v"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="19" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" image="clear_24px"/>
+                                        <connections>
+                                            <action selector="backBtn:" destination="9e6-Yt-gly" eventType="touchUpInside" id="0nK-Un-Y8K"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서비스 이용 약관" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F16-EY-Utc">
+                                        <rect key="frame" x="112.5" y="15" width="105" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="kBb-nK-moY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rh0-nM-7oE">
+                                        <rect key="frame" x="20" y="60" width="290" height="430"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus cursus aliquet et ultrices tempor laoreet ullamcorper amet. Nulla vitae volutpat integer fusce pretium nunc sed. Non laoreet feugiat sed vulputate libero commodo, nunc et, feugiat. Commodo convallis habitasse habitant in. Facilisi interdum mi augue bibendum posuere nunc, semper. Pharetra ac sed accumsan, nisi, in egestas orci cursus. Nullam consectetur faucibus elementum amet est non accumsan, auctor. Eget nulla et consequat eget leo ultrices. Facilisis feugiat nascetur cras pellentesque at at mi dictumst sit. Ante hac amet mi faucibus sit vitae. Vel sed malesuada semper rhoncus. Adipiscing duis posuere vel viverra ultricies ornare sed consequat sed. Mauris integer sit ac, quisque. Et, quam commodo est proin purus. Sed mi lacus arcu diam sollicitudin sit sodales in magna. Netus iaculis massa sed in cursus. Etiam lectus velit vestibulum tristique parturient mauris viverra eget molestie. Nibh quam interdum nunc nunc convallis amet ut. Ac phasellus tortor porta orci, eu placerat morbi senectus arcu. Nisl orci odio lorem ipsum risus. Posuere ultricies morbi augue nec tortor massa, nibh facilisi. Pharetra porttitor porttitor consequat enim pellentesque donec. Volutpat morbi magna consequat massa dignissim. Velit, pulvinar phasellus hendrerit arcu nunc facilisis aenean diam. Suspendisse auctor ipsum quis scelerisque facilisis pellentesque. Fermentum, cum pretium vehicula tellus facilisis. Fermentum nec purus lectus turpis. Diam pellentesque habitant et elementum sem nisi, mollis neque. Adipiscing congue faucibus dui faucibus ornare cras morbi.</string>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="550" id="8y3-89-GCt"/>
+                                    <constraint firstAttribute="width" constant="330" id="B7V-gI-o6x"/>
+                                    <constraint firstItem="F16-EY-Utc" firstAttribute="centerX" secondItem="cLw-LI-Nf3" secondAttribute="centerX" id="OKR-dn-bZf"/>
+                                    <constraint firstItem="Rh0-nM-7oE" firstAttribute="top" secondItem="F16-EY-Utc" secondAttribute="bottom" constant="23" id="aL6-JC-ybR"/>
+                                    <constraint firstAttribute="trailing" secondItem="Rh0-nM-7oE" secondAttribute="trailing" constant="20" id="egU-hE-49a"/>
+                                    <constraint firstItem="hCu-Bc-ziY" firstAttribute="top" secondItem="cLw-LI-Nf3" secondAttribute="top" id="gaa-qy-eLR"/>
+                                    <constraint firstItem="hCu-Bc-ziY" firstAttribute="leading" secondItem="cLw-LI-Nf3" secondAttribute="leading" id="h2l-uh-dq0"/>
+                                    <constraint firstAttribute="bottom" secondItem="Rh0-nM-7oE" secondAttribute="bottom" constant="60" id="kVc-Sf-3l4"/>
+                                    <constraint firstItem="F16-EY-Utc" firstAttribute="top" secondItem="cLw-LI-Nf3" secondAttribute="top" constant="15" id="tyq-DL-8ZB"/>
+                                    <constraint firstItem="Rh0-nM-7oE" firstAttribute="leading" secondItem="cLw-LI-Nf3" secondAttribute="leading" constant="20" id="uiH-fw-LLE"/>
+                                    <constraint firstItem="F16-EY-Utc" firstAttribute="leading" secondItem="hCu-Bc-ziY" secondAttribute="trailing" id="zyn-33-euc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hnP-gA-Oj0"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="cLw-LI-Nf3" firstAttribute="centerY" secondItem="3XC-dy-Z5N" secondAttribute="centerY" id="59T-au-G4L"/>
+                            <constraint firstItem="cLw-LI-Nf3" firstAttribute="centerX" secondItem="3XC-dy-Z5N" secondAttribute="centerX" id="J2R-1w-koQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="termsTV" destination="Rh0-nM-7oE" id="9MX-dw-TT3"/>
+                        <outlet property="termsTitleLabel" destination="F16-EY-Utc" id="XrG-kq-woz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ole-je-XUn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-455.07246376811599" y="150"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="clear_24px" width="14" height="14"/>
+    </resources>
+</document>
