@@ -9,3 +9,5 @@
 import UIKit
 
 let app = UIApplication.shared.delegate as! AppDelegate
+let deviceHeight: CGFloat = UIScreen.main.bounds.height //디바이스 높이
+let deviceWidth: CGFloat = UIScreen.main.bounds.width //디바이스 넓이
