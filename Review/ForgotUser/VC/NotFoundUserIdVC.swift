@@ -9,84 +9,34 @@
 import UIKit
 
 class NotFoundUserIdVC: UIViewController {
-//    @IBOutlet weak var phoneWrap: UIView!
-//
-//    @IBOutlet weak var birthWrap: UIView!
-//
-//    @IBOutlet weak var nextStepWrap: UIView!
-//
+
     var nextStepWrapHeight:CGFloat = 44.0
     
     //처음으로 돌아가기
     @IBOutlet weak var backToFirstWrap: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.uiInit()
-//        self.keyboardInit()
-        
     }
     
     func uiInit() {
         backToFirstWrap.layer.borderWidth = 0.5
         backToFirstWrap.layer.borderColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1).cgColor
     }
+    
     @IBAction func backBtn(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
+    
     //처음으로 돌아가기
     @IBAction func backToFirstBtn(_ sender: Any) {
-        app.loginRootMove()
-        
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
-    //
-//    func keyboardInit() {
-//        NotificationCenter.default.addObserver(
-//            self,
-//            selector: #selector(keyboardWillShowing),
-//            name: UIResponder.keyboardWillShowNotification,
-//            object: nil
-//        )
-//        
-//        NotificationCenter.default.addObserver(
-//            self,
-//            selector: #selector(keyboardWillHide(_:)),
-//            name: UIResponder.keyboardWillHideNotification,
-//            object: nil
-//        )
-//    }
-//    
-//    @IBAction func back(_ sender: Any) {
-//        self.dismiss(animated: true, completion: nil)
-//    }
-//    
-//
-//    //키보드 높이 찾아주는 부분
-//    @objc func keyboardWillShowing(notification:NSNotification){
-//        let userInfo:NSDictionary = notification.userInfo! as NSDictionary;
-//        let keyboardFrame:NSValue = userInfo.value(forKey: UIResponder.keyboardFrameEndUserInfoKey) as! NSValue
-//        let keyboardRectangle = keyboardFrame.cgRectValue;
-//        let keyboardHeight = keyboardRectangle.size.height;
-//          
-//        self.nextStepWrap.constraints.forEach { (constraint) in // ---- 3
-//            if constraint.firstAttribute == .height {
-//                constraint.constant = self.nextStepWrapHeight + keyboardHeight - 30.0
-//                print(constraint.constant)
-//            }
-//        }
-//        
-//        
-//        print(keyboardHeight)
-//    }
-//      
-//      //키보드 숨겨질 때 이벤트
-//    @objc private func keyboardWillHide(_ notification: Notification) {
-//        nextStepWrap.constraints.forEach { (constraint) in // ---- 3
-//            if constraint.firstAttribute == .height {
-//                  constraint.constant = nextStepWrapHeight
-//            }
-//        }
-//    }
+    
+    @IBAction func signUpBtn(_ sender: Any) {
+        let signUpTermsVC = signUpStoryBoard.instantiateViewController(withIdentifier: "SignUpTermsVC") as! SignUpTermsVC
+        self.present(signUpTermsVC, animated: true, completion: nil)
+    }
 }
 
 

@@ -22,6 +22,7 @@ class ForgotUserIdVC: UIViewController {
     //phoneNumberGuideLabel
     @IBOutlet weak var phoneNumberGL: UILabel!
     @IBOutlet weak var phoneNumberTF: UITextField!
+    
     //birthGuideLabel
     @IBOutlet weak var birthGL: UILabel!
     @IBOutlet weak var birthTF: UITextField!
@@ -37,8 +38,8 @@ class ForgotUserIdVC: UIViewController {
         self.delegateInit()
         self.uiInit()
         self.keyboardInit()
-        
     }
+    
     func delegateInit() {
         self.phoneNumberTF.delegate = self
         //텍스트 필드 입력 시 이벤트 발생
@@ -76,18 +77,15 @@ class ForgotUserIdVC: UIViewController {
         if phoneNumberTF.text!.count == 13 {
             if birthTF.text!.count == 10 {
                 nextStepBtn.setTitleColor(.white, for: .normal)
-                nextStepWrap.backgroundColor = .black
-               
-                print("222")
+                nextStepBtn.backgroundColor = .black
             }else {
-//                nextStepWrap.backgroundColor =
-           
+                nextStepBtn.backgroundColor = .white
+                nextStepBtn.setTitleColor(UIColor(red: 204/255, green: 204/255, blue: 204/255, alpha: 1), for: .normal)
             }
         }else {
-            nextStepWrap.backgroundColor = .white
-
+            nextStepBtn.backgroundColor = .white
+            nextStepBtn.setTitleColor(UIColor(red: 204/255, green: 204/255, blue: 204/255, alpha: 1), for: .normal)
         }
-        
     }
     
     @IBAction func back(_ sender: Any) {
@@ -112,7 +110,6 @@ class ForgotUserIdVC: UIViewController {
                 print(constraint.constant)
             }
         }
-        print(nextStepRootWrap.frame.origin.y)
     }
       
       //키보드 숨겨질 때 이벤트
@@ -126,8 +123,15 @@ class ForgotUserIdVC: UIViewController {
     
     //다음단계로 넘어가기
     @IBAction func nextStepBtn(_ sender: Any) {
-        let notFoundUserIdVC = forgotUserInfoStoryBoard.instantiateViewController(withIdentifier: "NotFoundUserIdVC") as! NotFoundUserIdVC
-        self.present(notFoundUserIdVC, animated: true, completion: nil)
+        if phoneNumberTF.text!.count == 13 {
+            if birthTF.text!.count == 10 {
+//                let notFoundUserIdVC = forgotUserInfoStoryBoard.instantiateViewController(withIdentifier: "NotFoundUserIdVC") as! NotFoundUserIdVC
+//                self.present(notFoundUserIdVC, animated: true, completion: nil)
+                
+                let foundUserIdVC = forgotUserInfoStoryBoard.instantiateViewController(withIdentifier: "FoundUserIdVC") as! FoundUserIdVC
+                self.present(foundUserIdVC, animated: true, completion: nil)
+            }
+        }
     }
 }
 

@@ -8,7 +8,7 @@
 import UIKit
 
 class SignUpTermsVC: UIViewController {
-
+    
     @IBOutlet weak var serviceTermsWrap: UIView!
     @IBOutlet weak var userInfoTermsWrap: UIView!
     @IBOutlet weak var serviceAgreeBtn: UIButton!
@@ -17,7 +17,7 @@ class SignUpTermsVC: UIViewController {
     @IBOutlet weak var allAgreeBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        
         //뷰 클릭 시 실행되는 이벤트를위한 세팅작업
         serviceTermsWrap.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(termsSelected)))
         userInfoTermsWrap.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(termsSelected)))
@@ -26,24 +26,52 @@ class SignUpTermsVC: UIViewController {
     @objc func termsSelected(_ gesture : UITapGestureRecognizer){
         let view = gesture.view!
         let tag = view.tag
+        let alert = popupStoryBoard.instantiateViewController(withIdentifier: "TermsPopupVC") as! TermsPopupVC
+        
+        
+        if tag == 0 {
+            alert.termsFlag = false
+        }else {
+            alert.termsFlag = true
+        }
+        alert.modalPresentationStyle = .overCurrentContext
+        present(alert, animated: false, completion: nil)
+//
+//        if tag == 0 {
+//            serviceAgreeBtn.backgroundColor = .black
+//            serviceTermsWrap.tag = 2
+//        }else if tag == 2 {
+//            serviceAgreeBtn.backgroundColor = UIColor(red: 0.769, green: 0.769, blue: 0.769, alpha: 1)
+//            serviceTermsWrap.tag = 0
+//        }else if tag == 1 {
+//            userInfoAgreeBtn.backgroundColor = .black
+//            userInfoTermsWrap.tag = 3
+//        }else {
+//            userInfoAgreeBtn.backgroundColor = UIColor(red: 0.769, green: 0.769, blue: 0.769, alpha: 1)
+//            userInfoTermsWrap.tag = 1
+//        }
+//        allAgreeCheck()
+    }
+    @IBAction func termsAgreeBtn(_ sender: UIButton) {
+        let tag = sender.tag
         if tag == 0 {
             serviceAgreeBtn.backgroundColor = .black
-            serviceTermsWrap.tag = 2
+            serviceAgreeBtn.tag = 2
         }else if tag == 2 {
             serviceAgreeBtn.backgroundColor = UIColor(red: 0.769, green: 0.769, blue: 0.769, alpha: 1)
-            serviceTermsWrap.tag = 0
+            serviceAgreeBtn.tag = 0
         }else if tag == 1 {
             userInfoAgreeBtn.backgroundColor = .black
-            userInfoTermsWrap.tag = 3
+            userInfoAgreeBtn.tag = 3
         }else {
             userInfoAgreeBtn.backgroundColor = UIColor(red: 0.769, green: 0.769, blue: 0.769, alpha: 1)
-            userInfoTermsWrap.tag = 1
+            userInfoAgreeBtn.tag = 1
         }
         allAgreeCheck()
     }
     
     func allAgreeCheck(){
-        if serviceTermsWrap.tag == 2 && userInfoTermsWrap.tag == 3 {
+        if serviceAgreeBtn.tag == 2 && userInfoAgreeBtn.tag == 3 {
             allAgreeBtn.setTitleColor(.black, for: .normal)
             allAgreeBtn.tag = 1
             nextStepBtn.setTitleColor(.white, for: .normal)
@@ -62,8 +90,8 @@ class SignUpTermsVC: UIViewController {
         if tag == 0 {
             serviceAgreeBtn.backgroundColor = .black
             userInfoAgreeBtn.backgroundColor = .black
-            serviceTermsWrap.tag = 2
-            userInfoTermsWrap.tag = 3
+            serviceAgreeBtn.tag = 2
+            userInfoAgreeBtn.tag = 3
             allAgreeBtn.setTitleColor(.black, for: .normal)
             nextStepBtn.setTitleColor(.white, for: .normal)
             nextStepBtn.backgroundColor = .black
@@ -71,8 +99,8 @@ class SignUpTermsVC: UIViewController {
         }else {
             serviceAgreeBtn.backgroundColor = UIColor(red: 0.769, green: 0.769, blue: 0.769, alpha: 1)
             userInfoAgreeBtn.backgroundColor = UIColor(red: 0.769, green: 0.769, blue: 0.769, alpha: 1)
-            serviceTermsWrap.tag = 0
-            userInfoTermsWrap.tag = 1
+            serviceAgreeBtn.tag = 0
+            userInfoAgreeBtn.tag = 1
             allAgreeBtn.setTitleColor(UIColor(red: 0.8, green: 0.8, blue: 0.769, alpha: 1), for: .normal)
             nextStepBtn.setTitleColor(UIColor(red: 0.8, green: 0.8, blue: 0.769, alpha: 1), for: .normal)
             nextStepBtn.backgroundColor = .white
@@ -82,7 +110,7 @@ class SignUpTermsVC: UIViewController {
     
     @IBAction func nextStepBtn(_ sender: UIButton) {
         //전체 동의를 해야 넘어갈 수 있음.
-        if serviceTermsWrap.tag == 2 && userInfoTermsWrap.tag == 3 {
+        if serviceAgreeBtn.tag == 2 && userInfoAgreeBtn.tag == 3 {
             let signUpPhoneWriteVC = signUpStoryBoard.instantiateViewController(withIdentifier: "SignUpPhoneWriteVC") as! SignUpPhoneWriteVC
             self.present(signUpPhoneWriteVC, animated: false, completion: nil)
         }
@@ -90,7 +118,8 @@ class SignUpTermsVC: UIViewController {
     
     //뒤로가기
     @IBAction func backBtn(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        //        self.dismiss(animated: true, completion: nil)
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
 }
 

@@ -30,7 +30,7 @@ extension CALayer { //border 세팅을 위한 extension 으로 CALayer 확장
                 border.frame = CGRect.init(x: 0, y: 0, width: deviceWidth, height: width)
                 break
             case UIRectEdge.bottom:
-                border.frame = CGRect.init(x: 0, y: frame.height - deviceWidth, width: deviceWidth, height: deviceWidth)
+                border.frame = CGRect.init(x: 0, y: frame.height - width, width: deviceWidth, height: width)
                 break
             case UIRectEdge.left:
                 border.frame = CGRect.init(x: 0, y: 0, width: deviceWidth, height: frame.height)
@@ -47,3 +47,46 @@ extension CALayer { //border 세팅을 위한 extension 으로 CALayer 확장
     }
 }
 
+
+// Global variable or stored in a singleton / top level object (Ex: AppCoordinator, AppDelegate)
+let imageCache = NSCache<NSString, UIImage>()
+
+extension UIImageView {
+
+    func downloadImage(from imgURL: String) -> URLSessionDataTask? {
+        guard let url = URL(string: imgURL) else { return nil }
+
+        // set initial image to nil so it doesn't use the image from a reused cell
+        image = nil
+
+        // check if the image is already in the cache
+        if let imageToCache = imageCache.object(forKey: imgURL as NSString) {
+            self.image = imageToCache
+            return nil
+        }
+
+        // download the image asynchronously
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let err = error {
+                print(err)
+                return
+            }
+
+            DispatchQueue.main.async {
+                // create UIImage
+                guard let setData = data as? Data else {
+                      return
+                }
+    
+                if let imageToCache = UIImage(data: setData) {
+                    // add image to cache
+                    imageCache.setObject(imageToCache, forKey: imgURL as NSString)
+                    self.image = imageToCache
+                }
+                
+            }
+        }
+        task.resume()
+        return task
+    }
+}

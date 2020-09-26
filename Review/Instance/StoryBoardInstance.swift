@@ -22,3 +22,6 @@ let loginStoryBoard: UIStoryboard = UIStoryboard.init(name: "Login", bundle: nil
 let mainHomeStoryBoard: UIStoryboard = UIStoryboard.init(name: "MainHome", bundle: nil)
 //지역검색 부분 스토리보드
 let searchAreaStoryBoard: UIStoryboard = UIStoryboard.init(name: "SearchArea", bundle: nil)
+//리뷰부분(웹뷰) 부분 스토리보드
+let reviewsStoryBoard: UIStoryboard = UIStoryboard.init(name: "Reviews", bundle: nil)
+

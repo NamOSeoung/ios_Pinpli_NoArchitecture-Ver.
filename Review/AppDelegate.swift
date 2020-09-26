@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     internal func loginRootMove() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "LoginVC")
+        let vc = storyboard.instantiateViewController(withIdentifier: "MainVC")
         self.window?.rootViewController = vc
         self.window?.makeKeyAndVisible()
     }

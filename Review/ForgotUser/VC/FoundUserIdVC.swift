@@ -20,7 +20,7 @@ class FoundUserIdVC: UIViewController {
         
     }
     @IBAction func backBtn(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
     //
     func uiInit() {
@@ -28,7 +28,13 @@ class FoundUserIdVC: UIViewController {
         forgetPwdWrap.layer.borderColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1).cgColor
         
     }
-//    
+    
+    //비밀번호도 까먹었어요 :( 버튼
+    @IBAction func forgotPasswordBtn(_ sender: Any) {
+        let forgotUserPwdVC = forgotUserInfoStoryBoard.instantiateViewController(withIdentifier: "ForgotUserPwdVC") as! ForgotUserPwdVC
+        self.present(forgotUserPwdVC, animated: true, completion: nil)
+    }
+    //
 //    func keyboardInit() {
 //        NotificationCenter.default.addObserver(
 //            self,
