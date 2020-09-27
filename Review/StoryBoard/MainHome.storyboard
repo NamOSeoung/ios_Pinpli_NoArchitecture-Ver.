@@ -436,21 +436,81 @@
             </objects>
             <point key="canvasLocation" x="-437" y="2408"/>
         </scene>
-        <!--View Controller-->
+        <!--Like StoreVC-->
         <scene sceneID="2O3-X3-Niy">
             <objects>
-                <viewController id="4qs-pE-XMy" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LikeStoreVC" id="4qs-pE-XMy" customClass="LikeStoreVC" customModule="Review" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xid-x4-Fmo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c0U-8Y-WTL">
+                                <rect key="frame" x="0.0" y="87" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.87058823529411766" green="0.87058823529411766" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="3gK-l8-K0Q"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kPF-SD-b2d">
+                                <rect key="frame" x="0.0" y="44" width="375" height="43"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="찜한 맛집" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eu6-y8-PZb">
+                                        <rect key="frame" x="155.66666666666666" y="8" width="64" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="D5o-FF-fXr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="highlightedColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Eu6-y8-PZb" firstAttribute="centerX" secondItem="kPF-SD-b2d" secondAttribute="centerX" id="1yb-Xl-T3S"/>
+                                    <constraint firstItem="Eu6-y8-PZb" firstAttribute="top" secondItem="kPF-SD-b2d" secondAttribute="top" constant="8" id="U4A-3B-4vH"/>
+                                    <constraint firstAttribute="height" constant="43" id="djB-5a-31b"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qpl-pu-8TM">
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8mh-fc-8GE">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="8mh-fc-8GE" secondAttribute="bottom" id="JBo-Kj-vuK"/>
+                                    <constraint firstItem="8mh-fc-8GE" firstAttribute="top" secondItem="qpl-pu-8TM" secondAttribute="top" id="Jci-DK-UFv"/>
+                                    <constraint firstItem="8mh-fc-8GE" firstAttribute="leading" secondItem="qpl-pu-8TM" secondAttribute="leading" id="WoJ-Jh-5NY"/>
+                                    <constraint firstAttribute="trailing" secondItem="8mh-fc-8GE" secondAttribute="trailing" id="mtf-eu-IU8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="pBV-E0-1YN"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kPF-SD-b2d" firstAttribute="leading" secondItem="pBV-E0-1YN" secondAttribute="leading" id="CJr-A9-oZc"/>
+                            <constraint firstAttribute="trailing" secondItem="c0U-8Y-WTL" secondAttribute="trailing" id="CiR-A5-0ui"/>
+                            <constraint firstItem="qpl-pu-8TM" firstAttribute="leading" secondItem="pBV-E0-1YN" secondAttribute="leading" id="DTP-Qv-9l5"/>
+                            <constraint firstItem="pBV-E0-1YN" firstAttribute="trailing" secondItem="kPF-SD-b2d" secondAttribute="trailing" id="axZ-VR-DJW"/>
+                            <constraint firstItem="c0U-8Y-WTL" firstAttribute="top" secondItem="kPF-SD-b2d" secondAttribute="bottom" id="gta-8d-Wca"/>
+                            <constraint firstItem="c0U-8Y-WTL" firstAttribute="leading" secondItem="xid-x4-Fmo" secondAttribute="leading" id="iHj-CP-xnr"/>
+                            <constraint firstItem="qpl-pu-8TM" firstAttribute="trailing" secondItem="pBV-E0-1YN" secondAttribute="trailing" id="pH0-dW-1s4"/>
+                            <constraint firstItem="kPF-SD-b2d" firstAttribute="top" secondItem="pBV-E0-1YN" secondAttribute="top" id="pvA-eb-eIq"/>
+                            <constraint firstItem="qpl-pu-8TM" firstAttribute="top" secondItem="c0U-8Y-WTL" secondAttribute="bottom" id="qm5-f2-teX"/>
+                            <constraint firstItem="qpl-pu-8TM" firstAttribute="bottom" secondItem="pBV-E0-1YN" secondAttribute="bottom" id="vF2-jT-VJV"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RZV-Sj-sx9"/>
+                    <connections>
+                        <outlet property="likeTV" destination="8mh-fc-8GE" id="Sjw-QZ-Mop"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5zF-3J-SKY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1721" y="802"/>
+            <point key="canvasLocation" x="1720.8" y="801.72413793103453"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="f9A-9V-8AT">

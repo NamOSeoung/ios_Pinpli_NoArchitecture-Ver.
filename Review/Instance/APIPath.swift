@@ -19,4 +19,5 @@ let hotKeywordURL:String = "/popularsearches" //인기검색어 검색
 let realtimeKeywordURL:String = "/autocomplete" //실시간 검색어
 
 let areaSuggest:String = "/area/suggest" //지역검색
+let bookmarkURL:String = "/bookmarks" //북마크 조회
 

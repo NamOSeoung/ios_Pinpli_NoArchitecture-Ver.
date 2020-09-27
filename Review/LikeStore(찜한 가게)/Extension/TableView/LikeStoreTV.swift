@@ -1,17 +1,17 @@
 //
-//  SearchResultTV.swift
+//  LikeStoreTV.swift
 //  Review
 //
-//  Created by 남오승 on 2020/09/24.
+//  Created by 남오승 on 2020/09/27.
 //  Copyright © 2020 nam_os. All rights reserved.
 //
 
 import UIKit
 
-extension SearchResultVC: UITableViewDelegate, UITableViewDataSource {
+extension LikeStoreVC: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let dataList = self.storeInfoReturn?.dataList else {
+        guard let dataList = self.bookmarkInfoReturn?.dataList else {
             return 0
         }
         return dataList.count
@@ -19,7 +19,7 @@ extension SearchResultVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let dataList = self.storeInfoReturn?.dataList else {
+        guard let dataList = self.bookmarkInfoReturn?.dataList else {
             return UITableViewCell.init()
         }
         
@@ -30,24 +30,25 @@ extension SearchResultVC: UITableViewDelegate, UITableViewDataSource {
         }
         let placeName:String = dataList[indexPath.row].place_name
         let categoryName:String = dataList[indexPath.row].category_name
-        let appReviewCount:Int = Int(dataList[indexPath.row].app_review_count)!
-        let googleReviewCount:Int = Int(dataList[indexPath.row].google_review_count)!
-        let naverReviewCount:Int = Int(dataList[indexPath.row].naver_blog_count)!
-        let daumReviewCount:Int = Int(dataList[indexPath.row].daum_blog_count)!
-        let youtubeReviewCount:Int = Int(dataList[indexPath.row].youtube_review_count)!
-        
-        if let appThumbnail:String = dataList[indexPath.row].app_thumbnail {
-            searchStoreCell?.thumbnailSetting(urlString: appThumbnail)
-        }else {
-            if let blogThumbnail:String = dataList[indexPath.row].blog_thumbnail {
-                searchStoreCell?.thumbnailSetting(urlString: blogThumbnail)
-            }
-        }
+        let appReviewCount:Int = dataList[indexPath.row].app_review_count
+        let googleReviewCount:Int = dataList[indexPath.row].google_review_count
+        let naverReviewCount:Int = dataList[indexPath.row].naver_blog_count
+        let daumReviewCount:Int = dataList[indexPath.row].daum_blog_count
+        let youtubeReviewCount:Int = dataList[indexPath.row].youtube_review_count
+        let appThumbnail:String = dataList[indexPath.row].thumbnail
+        let googleRating:Double = dataList[indexPath.row].google_rating
+        let appRating:Double = dataList[indexPath.row].app_rating
         
         let reviewTotalCoutn:String = "\(appReviewCount+googleReviewCount+naverReviewCount+daumReviewCount+youtubeReviewCount)"
         searchStoreCell?.reviewMoreBtn.setTitle(reviewTotalCoutn+"개의 리뷰 모아보기>", for: .normal)
         searchStoreCell?.placeName.text = placeName
         searchStoreCell?.category.text = categoryName
+        searchStoreCell?.thumbnailSetting(urlString: appThumbnail)
+        if appRating > 0.0 {
+            searchStoreCell?.grade.text = "★ ★ ★ ★ \(appRating)"
+        }else {
+            searchStoreCell?.grade.text = "★ ★ ★ ★ \(googleRating)"
+        }
 
         return searchStoreCell!
     }
