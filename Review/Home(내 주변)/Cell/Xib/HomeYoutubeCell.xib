@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeYoutubeCell" id="PMV-40-oUE" customClass="HomeYoutubeCell" customModule="Review" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="205" height="166"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xo6-Sb-kFE">
+                <rect key="frame" x="0.0" y="0.0" width="205" height="166"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image 30" translatesAutoresizingMaskIntoConstraints="NO" id="g2H-9k-omf">
+                        <rect key="frame" x="0.0" y="0.0" width="205" height="120"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="120" id="H37-C5-0f4"/>
+                            <constraint firstAttribute="width" constant="205" id="rkv-o1-3mn"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1va-a1-Mle">
+                        <rect key="frame" x="0.0" y="130" width="205" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="36" id="Nmk-f6-6hk"/>
+                        </constraints>
+                        <attributedString key="attributedText">
+                            <fragment>
+                                <string key="content">#2 VLOG | 남양주 / 별내 / 카페거리 /
+</string>
+                                <attributes>
+                                    <color key="NSColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
+                                    <font key="NSFont" size="14" name="AppleSDGothicNeo-Medium"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="2" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                            <fragment content=" ollien / 올리앤 / 빌리엔젤 / 다이소">
+                                <attributes>
+                                    <color key="NSColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
+                                    <font key="NSFont" size="14" name="AppleSDGothicNeo-Medium"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="g2H-9k-omf" firstAttribute="top" secondItem="xo6-Sb-kFE" secondAttribute="top" id="C1N-dg-63g"/>
+                    <constraint firstAttribute="trailing" secondItem="1va-a1-Mle" secondAttribute="trailing" id="HXe-Mm-zsN"/>
+                    <constraint firstItem="g2H-9k-omf" firstAttribute="leading" secondItem="xo6-Sb-kFE" secondAttribute="leading" id="HYC-UF-V6a"/>
+                    <constraint firstItem="1va-a1-Mle" firstAttribute="top" secondItem="g2H-9k-omf" secondAttribute="bottom" constant="10" id="TFu-79-5Hb"/>
+                    <constraint firstAttribute="bottom" secondItem="1va-a1-Mle" secondAttribute="bottom" id="bQN-xW-RRL"/>
+                    <constraint firstItem="1va-a1-Mle" firstAttribute="leading" secondItem="xo6-Sb-kFE" secondAttribute="leading" id="jjB-Ab-eha"/>
+                    <constraint firstAttribute="trailing" secondItem="g2H-9k-omf" secondAttribute="trailing" id="x8y-Qq-FTv"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <connections>
+                <outlet property="subject" destination="1va-a1-Mle" id="6VK-jf-X32"/>
+                <outlet property="thumbnail" destination="g2H-9k-omf" id="Woy-q3-VPR"/>
+            </connections>
+            <point key="canvasLocation" x="573.1884057971015" y="91.741071428571431"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="image 30" width="160" height="160"/>
+    </resources>
+</document>
