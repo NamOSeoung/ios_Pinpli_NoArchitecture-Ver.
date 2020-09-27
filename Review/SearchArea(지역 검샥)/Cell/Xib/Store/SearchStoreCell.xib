@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="UgD-kS-dA0" customClass="SearchStoreCell" customModule="Review" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="204"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UgD-kS-dA0" id="C4W-Xg-uo0">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="204"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="storeImageNo" translatesAutoresizingMaskIntoConstraints="NO" id="6Qx-Bs-IN2">
+                        <rect key="frame" x="22" y="22" width="160" height="160"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="160" id="9QW-A5-S6i"/>
+                            <constraint firstAttribute="width" constant="160" id="fpx-Zm-nZ3"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영업중" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccr-wK-fwC">
+                        <rect key="frame" x="196" y="22" width="133" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="BKF-I3-dIs"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="16"/>
+                        <color key="textColor" red="0.43529411764705883" green="0.81176470588235294" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heartOn" translatesAutoresizingMaskIntoConstraints="NO" id="VEZ-Z9-4k0">
+                        <rect key="frame" x="329" y="24" width="24" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="35n-qf-W8w"/>
+                            <constraint firstAttribute="height" constant="21" id="VzN-8W-Jye"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="곱분이곱창 별내점" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v54-IL-kO2">
+                        <rect key="frame" x="196" y="57" width="157" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="KOJ-ZK-k4K"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
+                        <color key="textColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="곱창 전문점" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIN-Ez-5D6">
+                        <rect key="frame" x="196" y="92" width="157" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="LNV-cB-yDD"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
+                        <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktj-dt-Y3R">
+                        <rect key="frame" x="196" y="164" width="157" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="caw-FT-f6i"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
+                        <state key="normal" title="431개의 리뷰 모아보기 &gt;">
+                            <color key="titleColor" red="0.50980392156862742" green="0.50980392156862742" blue="0.50980392156862742" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S1Q-iE-jfP">
+                        <rect key="frame" x="0.0" y="204" width="375" height="0.5"/>
+                        <color key="backgroundColor" red="0.87058823529411766" green="0.87058823529411766" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="SoH-Wu-4kJ"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★ ★ ★ ★  4.1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJ0-Xf-bmo">
+                        <rect key="frame" x="196" y="130" width="169" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="Yep-N0-GM9"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="16"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="uJ0-Xf-bmo" firstAttribute="top" secondItem="OIN-Ez-5D6" secondAttribute="bottom" constant="17" id="0N0-0m-gJp"/>
+                    <constraint firstAttribute="trailing" secondItem="VEZ-Z9-4k0" secondAttribute="trailing" constant="22" id="0eV-Tx-myt"/>
+                    <constraint firstItem="ccr-wK-fwC" firstAttribute="leading" secondItem="6Qx-Bs-IN2" secondAttribute="trailing" constant="14" id="1PZ-xN-Wya"/>
+                    <constraint firstItem="S1Q-iE-jfP" firstAttribute="top" secondItem="6Qx-Bs-IN2" secondAttribute="bottom" constant="22" id="4pf-hU-guo"/>
+                    <constraint firstItem="VEZ-Z9-4k0" firstAttribute="leading" secondItem="ccr-wK-fwC" secondAttribute="trailing" id="5R3-hA-wbQ"/>
+                    <constraint firstAttribute="trailing" secondItem="v54-IL-kO2" secondAttribute="trailing" constant="22" id="6Or-cZ-58E"/>
+                    <constraint firstItem="VEZ-Z9-4k0" firstAttribute="top" secondItem="C4W-Xg-uo0" secondAttribute="top" constant="24" id="DcL-Ul-yNf"/>
+                    <constraint firstItem="v54-IL-kO2" firstAttribute="leading" secondItem="6Qx-Bs-IN2" secondAttribute="trailing" constant="14" id="E7k-54-KXb"/>
+                    <constraint firstAttribute="trailing" secondItem="ktj-dt-Y3R" secondAttribute="trailing" constant="22" id="Gcv-CO-JZ6"/>
+                    <constraint firstItem="OIN-Ez-5D6" firstAttribute="top" secondItem="v54-IL-kO2" secondAttribute="bottom" constant="10" id="Gh3-bs-Oaa"/>
+                    <constraint firstAttribute="trailing" secondItem="S1Q-iE-jfP" secondAttribute="trailing" id="Rx7-pD-X1F"/>
+                    <constraint firstItem="ktj-dt-Y3R" firstAttribute="leading" secondItem="6Qx-Bs-IN2" secondAttribute="trailing" constant="14" id="ZyA-Sm-hHH"/>
+                    <constraint firstItem="6Qx-Bs-IN2" firstAttribute="leading" secondItem="C4W-Xg-uo0" secondAttribute="leading" constant="22" id="b1V-jU-TVB"/>
+                    <constraint firstAttribute="trailing" secondItem="OIN-Ez-5D6" secondAttribute="trailing" constant="22" id="bY2-oN-ec5"/>
+                    <constraint firstAttribute="trailing" secondItem="uJ0-Xf-bmo" secondAttribute="trailing" constant="10" id="cef-hZ-eGR"/>
+                    <constraint firstItem="uJ0-Xf-bmo" firstAttribute="leading" secondItem="6Qx-Bs-IN2" secondAttribute="trailing" constant="14" id="cj8-WQ-tKb"/>
+                    <constraint firstItem="S1Q-iE-jfP" firstAttribute="top" secondItem="ktj-dt-Y3R" secondAttribute="bottom" constant="22" id="coJ-Os-EoX"/>
+                    <constraint firstItem="v54-IL-kO2" firstAttribute="top" secondItem="VEZ-Z9-4k0" secondAttribute="bottom" constant="12" id="e2g-0G-fcs"/>
+                    <constraint firstAttribute="bottom" secondItem="S1Q-iE-jfP" secondAttribute="bottom" id="g7Y-vt-L7z"/>
+                    <constraint firstItem="OIN-Ez-5D6" firstAttribute="leading" secondItem="6Qx-Bs-IN2" secondAttribute="trailing" constant="14" id="nJ3-Jb-CRG"/>
+                    <constraint firstItem="S1Q-iE-jfP" firstAttribute="leading" secondItem="C4W-Xg-uo0" secondAttribute="leading" id="q3z-NN-8MT"/>
+                    <constraint firstItem="ccr-wK-fwC" firstAttribute="top" secondItem="C4W-Xg-uo0" secondAttribute="top" constant="22" id="rCF-Jt-fxg"/>
+                    <constraint firstItem="6Qx-Bs-IN2" firstAttribute="top" secondItem="C4W-Xg-uo0" secondAttribute="top" constant="22" id="znC-1O-ZFj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="bookmarkImage" destination="VEZ-Z9-4k0" id="arf-yV-6aF"/>
+                <outlet property="category" destination="OIN-Ez-5D6" id="wm6-5Z-Smd"/>
+                <outlet property="grade" destination="uJ0-Xf-bmo" id="bq4-iZ-CQn"/>
+                <outlet property="openGL" destination="ccr-wK-fwC" id="qfU-ZL-Sm9"/>
+                <outlet property="placeName" destination="v54-IL-kO2" id="GCy-9k-Luh"/>
+                <outlet property="reviewMoreBtn" destination="ktj-dt-Y3R" id="fch-qf-Mx1"/>
+                <outlet property="thumbnail" destination="6Qx-Bs-IN2" id="ive-o5-iDo"/>
+            </connections>
+            <point key="canvasLocation" x="86.231884057971016" y="-15.401785714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="heartOn" width="24" height="21.5"/>
+        <image name="storeImageNo" width="160" height="160"/>
+    </resources>
+</document>
